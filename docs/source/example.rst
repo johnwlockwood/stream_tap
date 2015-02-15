@@ -5,7 +5,7 @@ example scripts
 :mod:`tap_example` Module
 -------------------------------------------
 
-Uses tap to get information from a stream
+Uses stream tap to get information from a stream
 of data in csv files.
 
 .. automodule:: tap_example

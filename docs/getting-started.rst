@@ -91,7 +91,7 @@ Use Simple functions to get info from a stream of data.
         print("=== fruits ===")
         for fruit in fruits:
             print(fruit)
-    
+
         print("=== metals ===")
         for metal in metals:
             print(metal)
