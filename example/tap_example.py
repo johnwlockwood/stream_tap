@@ -1,13 +1,8 @@
-from functools import partial
-import os
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-from karld.iter_utils import i_batch
-
-from karld.loadump import is_file_csv
-from karld.run_together import csv_file_consumer
-from karld.run_together import pool_run_files_to_files
-from karld.tap import Bucket
-from karld.tap import stream_tap
+from stream_tap import Bucket
+from stream_tap import stream_tap
 
 
 def get_fruit(item):
@@ -35,26 +30,39 @@ def certain_kind_tap(data_items):
 
     items = stream_tap((fruit_spigot, metal_spigot), data_items)
 
-    for batch in i_batch(100, items):
-        tuple(batch)
+    # consume iterator.
+    tuple(items)
 
     return fruit_spigot.contents(), metal_spigot.contents()
 
 
-def run(in_dir):
+def run():
     """
     Run the composition of csv_file_consumer and information tap
     with the csv files in the input directory, and collect
     the results from each file and merge them together,
     printing both kinds of results.
 
-    :param in_dir: directory of input csv files.
     """
-    files_to_files_runner = pool_run_files_to_files
+    data_items = [
+        "mushroom", "fungus",
+        "tomato", "fruit",
+        "topaz", "mineral",
+        "iron", "metal",
+        "dróżką", "utf-8 sample",
+        "apple", "fruit",
+        "cheese", "dairy",
+        "peach", "fruit",
+        "celery", "vegetable",
+        "pear", "fruit",
+        "ruby", "mineral",
+        "titanium", "metal",
+        "cat", "animal",
+        "orange", "fruit",
+        "WĄŻ", "utf-8 sample",
+    ]
 
-    results = files_to_files_runner(
-        partial(csv_file_consumer, certain_kind_tap),
-        in_dir, filter_func=is_file_csv)
+    results = certain_kind_tap(data_items)
 
     fruit_results = []
     metal_results = []
@@ -74,5 +82,6 @@ def run(in_dir):
     for metal in metal_results:
         print(metal)
 
+
 if __name__ == "__main__":
-    run(os.path.join("test_data", "things_kinds"))
+    run()
