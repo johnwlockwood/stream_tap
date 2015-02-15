@@ -1,5 +1,5 @@
 Getting Started with stream_tap
-===========================
+==================================
 
 If you're moving data from one place to another this gives you
 a way to capture data from it as it goes by without interrupting it.
