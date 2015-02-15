@@ -56,7 +56,7 @@ except:
     license_info = 'APACHE 2.0'
 
 setup_args = dict(
-    name="karld",
+    name="stream_tap",
     version=get_version(),
     author="John W Lockwood IV",
     author_email="john@tackletronics.com",
