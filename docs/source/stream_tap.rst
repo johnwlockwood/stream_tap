@@ -1,8 +1,8 @@
 stream_tap Package
-=============
+===================
 
 :mod:`stream_tap` Package
---------------------
+-----------------------------
 
 .. automodule:: stream_tap.__init__
     :members:

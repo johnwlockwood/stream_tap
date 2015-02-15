@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to stream_tap's documentation!
-=================================
+==========================================
 
 Contents:
 
@@ -13,6 +13,7 @@ Contents:
 
    getting-started
    source/stream_tap
+   source/stream_tap.tests
    source/example
 
 Indices and tables
