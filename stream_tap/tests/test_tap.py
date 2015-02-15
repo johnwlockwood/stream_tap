@@ -1,7 +1,7 @@
 from collections import deque
 import unittest
-from karld.tap import Bucket
-from karld.tap import stream_tap
+from stream_tap import Bucket
+from stream_tap import stream_tap
 
 
 def get_odd(item):

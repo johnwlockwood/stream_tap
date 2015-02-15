@@ -21,6 +21,7 @@ Use Simple functions to get info from a stream of data.
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
 
+
     from stream_tap import Bucket
     from stream_tap import stream_tap
 
@@ -50,8 +51,9 @@ Use Simple functions to get info from a stream of data.
 
         items = stream_tap((fruit_spigot, metal_spigot), data_items)
 
-        # consume iterator. This may be writing it to a database or file.
-        tuple(items)
+        # consume iterator.
+        for item in items:
+            print item
 
         return fruit_spigot.contents(), metal_spigot.contents()
 
@@ -65,41 +67,33 @@ Use Simple functions to get info from a stream of data.
 
         """
         data_items = [
-            "mushroom", "fungus",
-            "tomato", "fruit",
-            "topaz", "mineral",
-            "iron", "metal",
-            "dróżką", "utf-8 sample",
-            "apple", "fruit",
-            "cheese", "dairy",
-            "peach", "fruit",
-            "celery", "vegetable",
-            "pear", "fruit",
-            "ruby", "mineral",
-            "titanium", "metal",
-            "cat", "animal",
-            "orange", "fruit",
-            "WĄŻ", "utf-8 sample",
+            [u"mushroom", u"fungus"],
+            [u"tomato", u"fruit"],
+            [u"topaz", u"mineral"],
+            [u"iron", u"metal"],
+            [u"dróżką", u"utf-8 sample"],
+            [u"apple", u"fruit"],
+            [u"cheese", u"dairy"],
+            [u"peach", u"fruit"],
+            [u"celery", u"vegetable"],
+            [u"pear", u"fruit"],
+            [u"ruby", u"mineral"],
+            [u"titanium", u"metal"],
+            [u"cat", u"animal"],
+            [u"orange", u"fruit"],
+            [u"WĄŻ", u"utf-8 sample"],
         ]
 
         results = certain_kind_tap(data_items)
 
-        fruit_results = []
-        metal_results = []
-
-        for fruits, metals in results:
-            for fruit in fruits:
-                fruit_results.append(fruit)
-
-            for metal in metals:
-                metal_results.append(metal)
+        fruits, metals = results
 
         print("=== fruits ===")
-        for fruit in fruit_results:
+        for fruit in fruits:
             print(fruit)
-
+    
         print("=== metals ===")
-        for metal in metal_results:
+        for metal in metals:
             print(metal)
 
 

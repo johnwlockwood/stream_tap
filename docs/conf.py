@@ -25,7 +25,7 @@ example_path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
 if example_path not in sys.path:
     sys.path.append(example_path)
 
-import karld
+import stream_tap
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
