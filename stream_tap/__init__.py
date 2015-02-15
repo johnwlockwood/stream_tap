@@ -1,4 +1,9 @@
+from . import _meta
 from collections import deque
+
+
+__version__ = _meta.version
+__version_info__ = _meta.version_info
 
 
 class Bucket(object):
