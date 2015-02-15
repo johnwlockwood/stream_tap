@@ -4,3 +4,4 @@ mock
 coverage
 nose-exclude
 pathlib
+sphinx==1.2.3

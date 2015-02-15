@@ -182,7 +182,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'karlddoc'
+htmlhelp_basename = 'stream_tapdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -201,7 +201,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'karld.tex', u'karld Documentation',
+  ('index', 'stream_tap.tex', u'stream_tap Documentation',
    u'John W Lockwood IV', 'manual'),
 ]
 

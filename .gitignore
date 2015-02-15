@@ -1,4 +1,5 @@
 .idea
+docs/_build
 stream_tapc
 _trial_temp
 cover
