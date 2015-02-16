@@ -90,3 +90,25 @@ Example
 
     if __name__ == "__main__":
         run()
+
+Documentation
+===============================
+
+Read the docs: http://stream_tap.readthedocs.org/en/latest/
+
+
+Contributing:
+==================
+Submit any issues or questions here: https://github.com/johnwlockwood/stream_tap/issues.
+
+Make pull requests to **development** branch of
+ https://github.com/johnwlockwood/stream_tap.
+
+**Documentation** is written in reStructuredText and currently uses the
+ Sphinx style for field
+ lists http://sphinx-doc.org/domains.html#info-field-lists
+
+Check out closed pull requests to see the flow of development, as almost
+every change to master is done via a pull request on **GitHub**. Code Reviews
+are welcome, even on merged Pull Requests. Feel free to ask questions about
+the code.
